@@ -12,7 +12,7 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-    origin: "https://community-nu-five.vercel.app",
+    origin: "https://community-71rn.vercel.app",
     credentials: true,
 }));
 
