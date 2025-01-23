@@ -83,7 +83,7 @@ const CreateServicePage = () => {
             toast.success('Service created successfully!');
             navigate('/services');
         } catch (error) {
-            toast.error(`Failed to create service: ${error.message}`);
+            toast.error(`Failed to create campaign: ${error.message}`);
         }
     };
 
@@ -97,7 +97,7 @@ const CreateServicePage = () => {
 
     return (
         <div className="p-6 max-w-lg mx-auto bg-yellow-50 rounded shadow-md">
-            <h1 className="text-2xl font-semibold mb-4 text-center">Create New Service</h1>
+            <h1 className="text-2xl font-semibold mb-4 text-center">Launch New Campaign</h1>
 
             {!isAdmin && (
                 <div className="mb-6">
