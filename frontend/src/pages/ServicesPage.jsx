@@ -73,7 +73,7 @@ const ServicesPage = () => {
     return (
         <div className="bg-yellow-50">
             <div className="p-6 max-w-7xl mx-auto bg-yellow-50">
-                <h1 className="text-3xl font-bold mb-6 text-center">All Services</h1>
+                <h1 className="text-3xl font-bold mb-6 text-center">All Campaigns</h1>
 
                 {/* Search Bar */}
                 <div className="mb-6">
@@ -222,7 +222,7 @@ const ServicesPage = () => {
 
             </div>
             <footer className="bg-gray-800 text-white text-center py-4 mt-12">
-                <p>&copy; 2025 Vanyana. All rights reserved.</p>
+                <p>&copy; 2025 Vanayana. All rights reserved.</p>
             </footer>
         </div>
     );
