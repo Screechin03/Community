@@ -11,12 +11,22 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(cookieParser());
+const allowedOrigins = [
+    "https://community-phnw.vercel.app",
+    "https://community-nu-five.vercel.app",
+];
+
 app.use(cors({
-    origin: "https://community-phnw.vercel.app",
+    origin: (origin, callback) => {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error("Not allowed by CORS"));
+        }
+    },
     credentials: true,
 }));
 
-// Routes
 app.use("/api/users", userRoutes);
 app.use("/api/services", serviceRoutes);
 app.use("/api/forms", formRoutes);
